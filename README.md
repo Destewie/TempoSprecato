@@ -1,7 +1,7 @@
 # TempoSprecato
  Applicazione Android per monitorare il tempo PERSO al telefono
  
- # Versione ideale
+ # Versione ideale S.O.
  Per le caratteristiche intrinseche di questo progetto, la versione ideale del sistema operativo è Android 8
  
  # Informazioni
