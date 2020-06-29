@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/nav_tempoNow"
+        android:icon="@drawable/ic_orologio"
+        android:title="Tempo attuale" />
+
+    <item
+        android:id="@+id/nav_registrazioni"
+        android:icon="@drawable/ic_lista"
+        android:title="Registrazioni" />
+
+    <item
+        android:id="@+id/nav_media"
+        android:icon="@drawable/ic_grafico"
+        android:title="Media" />
+
+    <item
+        android:id="@+id/nav_recordTime"
+        android:icon="@drawable/ic_stella"
+        android:title="Record" />
+</menu>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.des.temposprecato">
+
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/temposprecatoicon"
+        android:label="Time Away"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <activity android:name="com.example.des.temposprecato.Activities.Main_Activity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name="com.example.des.temposprecato.Services.ServizioTemporale"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.myapp.ServizioTemporale" />
+            </intent-filter>
+        </service>
+        <service
+            android:name="com.example.des.temposprecato.Broadcast_Receivers.IniziaServizioAStartup"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.myapp.IniziaServizioAStartup" />
+            </intent-filter>
+        </service>
+
+        <receiver
+            android:name="com.example.des.temposprecato.Broadcast_Receivers.IniziaServizioAStartup"
+            android:enabled="true"
+            android:exported="true"
+            android:permission="android.permission.RECEIVE_BOOT_COMPLETED">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.QUICKBOOT_POWERON" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </receiver>
+
+    </application>
+
+</manifest>
